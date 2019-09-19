@@ -24,6 +24,8 @@ public class TimeClient {
         Socket socket=null;
         InputStream input=null;
         /////////////////////////////////////////////////////////////
+        socket = new Socket("time.nist.gov", 13);
+        input = socket.getInputStream();
         
         StringBuilder builder=new StringBuilder();
         InputStreamReader reader=new InputStreamReader(input);
